@@ -1,0 +1,130 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 20px;
+    background: #f0f2f5;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #1a73e8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#debug {
+    background: #222;
+    color: #0f0;
+    padding: 15px;
+    font-family: monospace;
+    height: 200px;
+    overflow-y: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 16px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0d62c9;
+}
+
+button:disabled {
+    background: #999;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Authentication Forms */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.auth-container h2 {
+    margin-top: 0;
+    color: #1a73e8;
+    text-align: center;
+}
+
+.auth-container button {
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.auth-container p {
+    margin-top: 15px;
+    color: #666;
+}
+
+.auth-container a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}

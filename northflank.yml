@@ -1,0 +1,39 @@
+# Northflank deployment configuration
+version: '1.0'
+
+services:
+  - name: webapp
+    type: web-service
+    runtime: container
+    build:
+      method: docker
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - port: 8000
+        protocol: http
+        targetPort: 8000
+    environment:
+      - key: PYTHON_VERSION
+        value: '3.11'
+      - key: PORT
+        value: '8000'
+      - key: DB_PATH
+        value: './database.db'
+    resources:
+      cpu: 0.5
+      memory: 512Mi
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      enableAutoscaling: false
+    healthCheck:
+      path: '/'
+      port: ${PORT}
+      timeout: 30
+      interval: 60
+      successThreshold: 1
+      failureThreshold: 3
+    deployment:
+      strategy: rolling
+      replicas: 1
